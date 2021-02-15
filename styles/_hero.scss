@@ -1,0 +1,51 @@
+.hero {
+  background: $mainBgColor;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  img {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  .hero-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 560px;
+
+    .intro-text {
+      background-color: $textMainColor;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      font-size: 0.8em;
+      padding: 40px 15px 30px 15px;
+      margin: 20px;
+
+      border-radius: 32px;
+      -webkit-box-shadow: 3px 6px 8px 0px rgba(185, 187, 191, 1);
+      -moz-box-shadow: 3px 6px 8px 0px rgba(185, 187, 191, 1);
+      box-shadow: 3px 6px 8px 0px rgba(185, 187, 191, 1);
+
+      @include breakpoint(large) {
+        padding: 60px 45px 50px 45px;
+        font-size: 1.3em;
+      }
+    }
+
+    button {
+      border: none;
+      margin: 20px;
+    }
+  }
+}
