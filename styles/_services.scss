@@ -1,0 +1,57 @@
+.services {
+  background: $mainBgColor;
+  margin: 0 auto;
+
+  .services-grid {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    grid-gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .service {
+      background: $textMainColor;
+      width: 100%;
+      max-width: 300px;
+      padding: 20px 10px;
+      border-radius: 30px;
+      transition: scale 200ms ease-in-out, box-shadow 200ms ease-in-out;
+      //transition: box-shadow 200ms ease-in-out;
+      &:hover {
+        scale: 1.1;
+        -webkit-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      @include breakpoint(large) {
+        max-width: 400px;
+        padding: 50px 40px;
+      }
+
+      @include breakpoint(medium) {
+        max-width: 350px;
+        padding: 50px 40px;
+      }
+
+      h2 {
+        color: $secondaryColor;
+        text-align: center;
+      }
+
+      p {
+        color: white;
+        font-size: 1.2em;
+        text-align: center;
+      }
+    }
+  }
+}
