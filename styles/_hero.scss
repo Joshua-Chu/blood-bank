@@ -11,8 +11,12 @@
   }
 
   img {
+    margin: 0 auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 520px;
+    @include breakpoint(medium) {
+      max-width: 700px;
+    }
   }
 
   .hero-intro {
@@ -22,6 +26,7 @@
     align-items: center;
     width: 100%;
     max-width: 560px;
+    margin: 0 auto;
 
     .intro-text {
       background-color: $textMainColor;
@@ -29,7 +34,7 @@
       font-weight: 700;
       text-align: center;
       font-size: 0.8em;
-      padding: 40px 15px 30px 15px;
+      padding: 30px 10px;
       margin: 20px;
 
       border-radius: 32px;
@@ -38,8 +43,8 @@
       box-shadow: 3px 6px 8px 0px rgba(185, 187, 191, 1);
 
       @include breakpoint(large) {
-        padding: 60px 45px 50px 45px;
-        font-size: 1.3em;
+        padding: 50px 30px;
+        font-size: 1.1em;
       }
     }
 

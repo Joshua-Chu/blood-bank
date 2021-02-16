@@ -1,5 +1,5 @@
 $mainBgColor: #f4f8fe;
-$accentColor: #e6e7e9;
+$accentColor: rgb(230, 231, 233);
 
 //colors
 $textMainColor: #f94f5a;
@@ -65,6 +65,31 @@ section {
   padding-bottom: 150px;
 }
 
-h1 {
+h1,
+h2 {
+  padding: 0;
   margin: 0;
+}
+
+h1 {
+  margin-left: 20px;
+  text-shadow: 5px 5px 0px rgba(230, 231, 233, 1);
+  display: inline-block;
+  font-size: 7vw;
+  color: $textMainColor;
+  transition: color 500ms ease-in-out;
+
+  &:hover {
+    color: $ctaColor;
+  }
+
+  @include breakpoint(medium) {
+    font-size: 6vw;
+    margin-left: 50px;
+  }
+
+  @include breakpoint(large) {
+    font-size: 3.5vw;
+    margin-left: 50px;
+  }
 }

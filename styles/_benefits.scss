@@ -1,0 +1,59 @@
+.benefits {
+  background: $mainBgColor;
+
+  .benefits-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    justify-items: center;
+
+    .b2 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(2, auto);
+      justify-items: center;
+      justify-content: center;
+    }
+
+    .benefit {
+      text-align: center;
+      background: $accentColor;
+      width: 100%;
+      padding: 40px 10px;
+      max-width: 280px;
+
+      font-size: 1.5em;
+      color: white;
+
+      font-weight: 700;
+      border-radius: 15px;
+      transition: color 200ms ease-in-out;
+
+      &:nth-of-type(2n) {
+        background: $secondaryColor;
+
+        &:hover {
+          color: $textMainColor;
+        }
+      }
+
+      &:hover {
+        color: $ctaColor;
+      }
+
+      @include breakpoint(large) {
+        max-width: 400px;
+        padding: 100px 20px;
+      }
+
+      @include breakpoint(medium) {
+        padding: 70px 15px;
+        max-width: 340px;
+      }
+    }
+  }
+}
